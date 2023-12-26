@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 
@@ -68,11 +67,6 @@ export const ContactUs = () => {
     <HelmetProvider>
 
       <Container style={{ paddingBottom: '30px' }}>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
-        </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
             <h1 className="display-4 mb-4">Contact Me</h1>
@@ -108,7 +102,7 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="6" className="form-group">
                   <input
-                    className="form-control"
+                    className="form-controller"
                     id="name"
                     name="name"
                     placeholder="Name"
@@ -116,12 +110,12 @@ export const ContactUs = () => {
                     type="text"
                     required
                     onChange={handleChange}
-                    style={{ textDecorationColor: "wheat" }}
+                    style={{ textDecorationColor: "white" }}
                   />
                 </Col>
                 <Col lg="6" className="form-group">
                   <input
-                    className="form-control rounded-0"
+                    className="form-controller rounded-0"
                     id="email"
                     name="email"
                     placeholder="Email"
@@ -129,11 +123,12 @@ export const ContactUs = () => {
                     value={formData.email || ""}
                     required
                     onChange={handleChange}
+                    style={{ color: 'white' }}
                   />
                 </Col>
               </Row>
               <textarea
-                className="form-control rounded-0"
+                className="form-controller rounded-0"
                 id="message"
                 name="message"
                 placeholder="Message"
@@ -145,7 +140,7 @@ export const ContactUs = () => {
               <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit">
+                  <button className="btn ac_btn" type="submit" style={{ marginTop: '20px' }}>
                     {formData.loading ? "Sending..." : "Send"}
                   </button>
                 </Col>

@@ -51,7 +51,7 @@ const skills = [{
 },
 {
     name: "Flutter",
-    value: 95,
+    value: 75,
 },
 {
     name: "Python",

@@ -1,7 +1,7 @@
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta } from "../../content_option";
+import { introdata } from "../../content_option";
 import { Project } from "../portfolio";
 import { ContactUs } from "../contact";
 import { About } from "../about";
@@ -73,11 +73,6 @@ export const Home = () => {
   return (
     <HelmetProvider>
       <section id="home" className="home">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title> {meta.title}</title>
-          <meta name="description" content={meta.description} />
-        </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center">
           <div className="h_bg-image order-1 order-lg-2 h-100 image-container" style={{ position: 'relative', top: '30px' }}>
             <svg viewBox="0 0 170 200" xmlns="http://www.w3.org/2000/svg" className="svg-blob">
